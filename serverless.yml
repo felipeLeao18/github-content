@@ -1,0 +1,19 @@
+service: node-js-serverless-template
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+
+custom:
+  serverless-offline:
+    httpPort: 4000
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+functions:
+
+plugins:
+  - serverless-offline
+  - serverless-webpack
